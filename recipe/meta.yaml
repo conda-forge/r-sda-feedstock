@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: sda_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/sda_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sda/sda_{{ version }}.tar.gz
   sha256: 57320a1f9d486af9f1c51af9a5da43137dc8aea769869f17ca5f4169afb913ec
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 1004
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -42,22 +41,16 @@ test:
 
 about:
   home: http://strimmerlab.org/software/sda/
-  license: GPL (>= 3)
+  license: GPL-3.0-or-later
   summary: Provides an efficient framework for  high-dimensional linear and diagonal discriminant
     analysis with  variable selection.  The classifier is trained using James-Stein-type  shrinkage
     estimators and predictor variables are ranked using  correlation-adjusted t-scores
     (CAT scores).  Variable selection error  is controlled using false non-discovery
     rates or higher criticism.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - dpryan79
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
