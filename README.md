@@ -1,11 +1,11 @@
-About r-sda
-===========
+About r-sda-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sda-feedstock/blob/main/LICENSE.txt)
 
 Home: http://strimmerlab.org/software/sda/
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sda-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides an efficient framework for  high-dimensional linear and diagonal discriminant analysis with  variable selection.  The classifier is trained using James-Stein-type  shrinkage estimators and predictor variables are ranked using  correlation-adjusted t-scores (CAT scores).  Variable selection error  is controlled using false non-discovery rates or higher criticism.
 
